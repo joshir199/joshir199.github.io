@@ -197,7 +197,7 @@ ul {
   /* padding-bottom: 20px; */
 }
 
-.header {
+.header .profile_image {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -205,13 +205,6 @@ ul {
   height: auto;
   border-radius: 50%;
   /* float: left; */
-}
-
-.profile_image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;  /* makes it circular */
 }
 
 .header h1,
@@ -236,11 +229,11 @@ ul {
   margin: 0;
 }
 
-.header nav ul.flat {
+nav ul.flat {
   padding: 0;
 }
 
-.header nav ul.flat li {
+nav ul.flat li {
   display: inline-block;
   list-style: none;
   margin-left: 0;
@@ -249,12 +242,12 @@ ul {
   text-transform: capitalize;
 }
 
-.header .site-affilation {
+.site-affilation {
   display: flex;
   justify-content: space-between;
 }
 
-.header .site-affilation .email {
+.site-affilation .email {
   /* color: #a00; */
   font-size: 14px;
   display: block;
@@ -262,21 +255,25 @@ ul {
   font-weight: bolder;
 }
 
-.header .site-affilation .position {
-  /* color: #a00; */
-  /* font-size: 14px; */
-  /* display: block; */
+.site-affilation .position {
+  display: inline;          /* or display: inline-block; if you prefer */
+  margin-right: 3rem;       /* adjust spacing as you like */
   font-family: Ubuntu;
-  /* font-weight: bolder; */
 }
 
-.header .site-affilation nav {
+.site-affilation .position {
+  display: inline;       /* this is the key */
+  margin-right: 2.5rem;  /* optional: nice spacing between the two lines */
+  font-family: Ubuntu;
+}
+
+.site-affilation nav {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.header .site-affilation nav ul svg {
+.site-affilation nav ul svg {
   max-height: 15px;
 }
 
