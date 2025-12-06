@@ -32,8 +32,8 @@
 
 	<body>
 		<div class="container wrapper">
-			<div class="header" style="width: 150px;">
-                <img src=assets/img/before.jpg class="profile_image">
+			<div class="header" style="height:228px;">
+                <img src=assets/img/profile_pic.jpg class="profile_image" style="width:228px; height:228px;">
             </div>
             <h1 class="site-title">Raushan Joshi</h1>
             <div class="site-affilation" style="display: flex; justify-content: space-between;">
@@ -68,56 +68,142 @@
                 </ul>
             </nav>
 
-
             <div class="introduction">
                 <span>
-					I am a MSc student in Artificial Intelligence at <a href="https://www.surrey.ac.uk/centre-vision-speech-signal-processing" target="_blank">Centre for Vision, Speech and Signal Processing (CVSSP)</a>, <a href="https://www.surrey.ac.uk/" target="_blank">University of Surrey</a>.
-					My research interests can be outlined broadly as follows.
+					I am an MSc student studying Artificial Intelligence (AI) at <a href="https://www.surrey.ac.uk/centre-vision-speech-signal-processing" target="_blank">Centre for Vision, Speech and Signal Processing (CVSSP)</a>, <a href="https://www.surrey.ac.uk/" target="_blank">University of Surrey</a>.
+					My research interests involves 3D Computer vision and Large Language models (LLMs) which can be outlined broadly as follows.
 					<ul>
-						<li>Learning algorithms for efficient adaptation under distribution shifts and robustness to spurious correlations.</li>
-						<li>Disentangled (causal) representation learning for sample efficient generalization and interpretability.</li>
-						<li>In-context learning and prior-fitted networks for probabilistic (causal) inference.</li>
+						<li>Developing efficient and robust algorithms for real-time interactive <b>editing</b> of 3D Gaussian Splatting (3D GS) scenes</li>
+						<li>Exploring lightweight and scalable Feed Forward Network (FFN) approaches for <b>pose-free</b> 3D scene reconstruction enabling easy adoption for real-world applications.</li>
+						<li>Designing language-embedded vision systems that integrate large language models with visual understanding for robust <b>multimodal</b> perception.</li>
 					</ul>
 
- 					<br>
 					<br>
-					Earlier, I completed my undergraduate in Electrical Engineering from the <a href="https://www.iitk.ac.in/" target="_blank">Indian Institute of Technology, Kanpur</a>.
+                    I have completed my Master's dissertation titled "Object Removal and Recolorization within 3D Gaussian Splatting Scenes" under the
+                    supervision of <a href="https://www.surrey.ac.uk/people/jean-yves-guillemaut" target="_blank">Dr. Jean-Yves Guillemaut</a>. The work introduces a
+                    real-time, interactive 3D editing framework that leverages high-quality SAM-HQ masks and learned prior-guided label reassignment to achieve precise object-level
+                    manipulation with full multiview consistency. For further details, refer to my dissertation proposals (<a href="Raushan_Joshi_Dissertation.pdf" target="_blank">Reports</a>).
+					<br>
+                    <br>
+                    Prior to starting my MSc degree, I was a Lead Engineer at <a href="https://research.samsung.com/sri-b" target="_blank">Samsung Research Institute, Bangalore</a>.
+                    During my engineering role at Samsung, I led development of notable product features like "Intelligent widgets for SmartHome IoT devices" in the SmartThings app, and "Personalized
+                    health insights" for Samsung Health app for Samsung Galaxy flagship phones. Most recently, I worked on efforts to create 3D realistic MapView of
+                    SmartHomes through pose-free 3D Gaussian Splatting (3D GS) scene reconstruction, enabling immersive visualization of connected devices.
+                    Earlier, I completed my undergraduate in Electrical Engineering from the <a href="https://www.iitk.ac.in/" target="_blank">Indian Institute of Technology, Kanpur</a>.
 	            </span>
+            </div>
+            <div class="introduction"></div>
+
+            <div class="introduction">
+            <br>
+            <div class="year">Select Research Works</div>
+            <ul>
+                <!-- Robust 3D editing -->
+                <li>
+                    <a href="Raushan_Joshi_Dissertation.pdf" class="publications" target="_blank"> ROBUST PRIOR-GUIDED SEGMENTATION FOR EDITABLE 3D GAUSSIAN SPLATTING </a>
+                    <span class="collaborators">
+                        <u>Raushan Joshi</u>*, Jean-Yves Guillemaut
+                        <br>
+                        Preprint. Under Review.
+                    </span>
+                </li>
+
+                <!-- Dissertation work -->
+                <li>
+                    <a href="Raushan_Joshi_Dissertation.pdf" class="publications" target="_blank"> Object Removal and Recolorization within 3D Gaussian Splatting Scenes </a>
+                    <span class="collaborators">
+                        <u>Raushan Joshi</u>*
+                        <br>
+                        <span class="code_blog">
+                        [<a href="https://github.com/joshir199/Object-Removal-And-Recolorization-Within-3D-Gaussian-Splatting" target="_blank">code</a>]
+                        </span>
+                    </span>
+                </li>
+
+                <!-- Pose-free Monocular 3D Reconstruction -->
+                <li>
+                    <a href="Sparse_Monocular_and_Unconstrained_3D_Language.pdf" class="publications" target="_blank"> Sparse Monocular and Unconstrained 3D Language Gaussian Splatting</a>
+                    <span class="collaborators">
+                        Shivali Bhatnagar*, <u>Raushan Joshi</u>*, Amogha D Shanbhag, Ankit Dhiman, Raveendra Karu, Kaushik Das
+                        <br>
+                    </span>
+                </li>
+
+            </ul>
+
+            <br>
+	        <div class="year">Select Awards & Honours</div>
+                <ul>
+                    <li>
+                        International Excellence Award Postgraduate Scholarship, University of Surrey: <a href="https://www.surrey.ac.uk/fees-and-funding/scholarships-and-bursaries/international-excellence-award-postgraduate" target="_blank">Session 2025-2026</a>
+                    </li>
+                    <li>
+                        Star of the Quarter Award, 2024: <a href="https://research.samsung.com/sri-b" target="_blank">SRI-B Bangalore</a>
+                    </li>
+                    <li>
+                        Samsung Excellence Award, 2021: <a href="https://research.samsung.com/sri-b" target="_blank">SRI-B Bangalore</a>
+                    </li>
+                    <li>
+                        Merit-cum Means (MCM) Scholarship, IIT Kanpur: <a href="https://www.iitk.ac.in/sspc/sspc-mcm-scholarship" target="_blank">Session 2014-2018</a>
+                    </li>
+
+                </ul>
             </div>
 
             <section class="slider-section">
-                <h2>Before / After Reconstruction Demo</h2>
+                <h2>Multi-view consistent 3D Object Editing Demo</h2>
                 <div class="slider-container">
                     <div class="slider-img before">
-                        <img src="assets/img/before.jpg" alt="Before image" />
+                        <img src="assets/img/bear_recolor.gif" alt="Before image" />
                     </div>
                     <div class="slider-img after">
-                        <img src="assets/img/after.jpg" alt="After image" />
+                        <img src="assets/img/bear_extracted.gif" alt="After image" />
                     </div>
                     <div class="slider-handle" tabindex="0"></div>
                 </div>
             </section>
+
+            <br>
+            <div class="introduction">
+            <br>
+	        <div class="year">Open Source Projects & Contributions: </div>
+                <ul>
+                    <li>
+                        <a href="https://github.com/joshir199/tourguider" target="_blank">LLM powered multi-lingual Audio TourGuider</a>
+                        <span class="collaborators">
+                            In-progress.... (for more details, drop me an <a href="mailto:raushanjoshi199@gmail.com" target="_blank">email !</a>)
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/joshir199/CUDA-Programming-Course" target="_blank">CUDA Programming Course</a>
+                        <span class="collaborators">
+                            Properly structured 3-month CUDA programming course with solved examples.
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer wrapper">
+                <nav class="nav">
+                    <div><a href="https://github.com/hadisinaee/avicenna">Avicenna Theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+                </nav>
+            </div>
+
+            <script type="application/javascript">
+                var doNotTrack = false;
+                if (!doNotTrack) {
+                    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+                    ga('create', 'UA-1234-6', 'auto');
+
+                    ga('send', 'pageview');
+                }
+            </script>
+            <script src="js/slider.js"></script>
+            <script>
+                feather.replace()
+            </script>
         </div>
-
-        <div class="footer wrapper">
-            <nav class="nav">
-                <div><a href="https://github.com/hadisinaee/avicenna">Avicenna Theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
-            </nav>
-        </div>
-
-        <script type="application/javascript">
-            var doNotTrack = false;
-            if (!doNotTrack) {
-                window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-                ga('create', 'UA-1234-6', 'auto');
-
-                ga('send', 'pageview');
-            }
-        </script>
-        <script src="js/slider.js"></script>
-        <script>
-            feather.replace()
-        </script>
 	</body>
 
     <a href="https://clustrmaps.com/site/1bd2q" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=dh57F17W0qZTvxZcbjRNVCFNEHdejsEBbdOAamZeGb4&cl=ffffff" style="display: none;"></a>

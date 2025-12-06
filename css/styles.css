@@ -201,8 +201,7 @@ ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 30%;
-  height: auto;
+
   border-radius: 50%;
   /* float: left; */
 }
@@ -442,7 +441,6 @@ nav ul.flat li {
   }
 }
 
-
 .slider-section {
 padding: 2rem;
 text-align: center;
@@ -451,8 +449,8 @@ text-align: center;
 
 .slider-container {
 position: relative;
-width: 90%;
-max-width: 900px;
+width: 80%;
+max-width: 800px;
 margin: 2rem auto;
 overflow: hidden;
 border-radius: 12px;
@@ -466,6 +464,7 @@ display: block;
 
 
 .after {
+content: '↔';
 position: absolute;
 top: 0;
 left: 0;
@@ -476,6 +475,7 @@ height: 100%;
 
 
 .slider-handle {
+content: '↔';
 position: absolute;
 top: 0;
 left: 50%;
@@ -484,4 +484,3 @@ height: 100%;
 background: #0078ff;
 cursor: ew-resize;
 }
-
