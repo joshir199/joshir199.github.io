@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Demos of 3D Gaussian Splatting editing</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    line-height: 1.6;
+  }
+
+  .page-title {
+    text-align: center;
+    margin: 60px 0 20px;
+    font-size: 2.3rem;
+    color: #222;
+  }
+
+  .demo-block {
+    margin: 120px auto;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  .demo-block h2 {
+    font-size: 1.9rem;
+    margin-bottom: 16px;
+    color: #333;
+  }
+
+  .demo-block p {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 720px;
+    margin: 0 auto 35px;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 860px;
+    max-width: 94vw;
+    height: 540px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    background: #000;
+    cursor: ew-resize;
+  }
+
+  .slider-container img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+  }
+
+  .top-image {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
+
+  .slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 70px;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .slider-handle::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  }
+
+  .slider-handle::after {
+    content: '↔';
+    position: absolute;
+    font-size: 38px;
+    color: white;
+    background: #333;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Demo for Robust Object Editing in 3D Gaussian Splatting scene</h1>
+<p style="margin: 40px auto; max-width: 860px; font-size: 1.15rem; line-height: 1.7; text-align: center; color: #333;">
+  Robust 3D Gaussian Splatting scene editing enables real-time, photorealistic 3D content creation and modification with full multi-view consistency, thus supporting AR/VR product customization, synthetic dataset generation for robotics and AI training, and interactive virtual staging.
+</p>
+
+<!-- DEMO 1 -->
+<div class="demo-block">
+  <h2>bear scene</h2>
+  <div class="slider-container">
+    <img src="assets/img/bear_extracted.gif" alt="Original">
+    <img src="assets/img/bear_recolor.gif" alt="Recolored" class="top-image">
+    <div class="slider-handle"></div>
+  </div>
+</div>
+
+<!-- DEMO 2 -->
+<div class="demo-block">
+  <h2>horn scene</h2>
+  <div class="slider-container">
+    <img src="assets/img/horn_extracted.gif" alt="Before">
+    <img src="assets/img/horn_recolor.gif" alt="After" class="top-image">
+    <div class="slider-handle"></div>
+  </div>
+</div>
+
+<!-- DEMO 3 -->
+<div class="demo-block">
+  <h2>teatime scene</h2>
+  <!--  <p>Single image → full 3D scene</p> -->
+  <div class="slider-container">
+    <img src="assets/img/teatime_extracted.gif" alt="Input">
+    <img src="assets/img/teatime_recolor.gif" alt="3D result" class="top-image">
+    <div class="slider-handle"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.slider-container').forEach(container => {
+    const topImg = container.querySelector('.top-image');
+    const handle = container.querySelector('.slider-handle');
+    let isDragging = false;
+
+    const update = (clientX) => {
+      const rect = container.getBoundingClientRect();
+      let percent = ((clientX - rect.left) / rect.width) * 100;
+      percent = Math.max(0, Math.min(100, percent));
+
+      topImg.style.clipPath = `polygon(0 0, ${percent}% 0, ${percent}% 100%, 0 100%)`;
+      handle.style.left = `${percent}%`;
+    };
+
+    // Mouse
+    container.addEventListener('mousedown', e => {
+      isDragging = true;
+      update(e.clientX);
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (isDragging) update(e.clientX);
+    });
+
+    document.addEventListener('mouseup', () => isDragging = false);
+
+    // Touch
+    container.addEventListener('touchstart', e => {
+      isDragging = true;
+      update(e.touches[0].clientX);
+      e.preventDefault();
+    });
+
+    container.addEventListener('touchmove', e => {
+      if (isDragging) {
+        update(e.touches[0].clientX);
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('touchend', () => isDragging = false);
+
+    // Start at 50%
+    const rect = container.getBoundingClientRect();
+    update(rect.left + rect.width * 0.5);
+  });
+});
+</script>
+
+</body>
+</html>
