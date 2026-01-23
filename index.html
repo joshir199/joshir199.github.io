@@ -71,12 +71,12 @@
             <div class="introduction">
                 <span>
 					I am an MSc student (finishing Jan'2026) studying Artificial Intelligence (AI) at <a href="https://www.surrey.ac.uk/centre-vision-speech-signal-processing" target="_blank">Centre for Vision, Speech and Signal Processing (CVSSP)</a>, <a href="https://www.surrey.ac.uk/" target="_blank">University of Surrey</a>.
-					My research interests involves 3D Computer vision and Large Language models (LLMs) which can be outlined broadly as follows.
+					My research interests involves development of end-to-end AI solutions especially Computer vision and Large Language models (LLMs) which can be outlined broadly as follows.
 					<ul>
-						<li>Developing efficient and robust algorithms for <b>real-time</b> interactive editing and <b>pose-free</b> reconstruction (SLAM technology) of 3D Gaussian Splatting (3D GS) scenes.</li>
-						<li>Building end-to-end ML pipelines with optimized <b>training and inference</b> on GPU (CUDA acceleration), focusing on performance-critical deployment for edge and embedded systems.</li>
+						<li>Building end-to-end ML pipelines with optimized <b>training and inference</b> on GPU (CUDA acceleration), focusing on performance-critical deployment for edge and embedded systems (in C++, Rust & Python).</li>
 						<li>Designing language-embedded vision systems that integrate large language models with visual understanding for robust <b>multimodal</b> perception.</li>
-					</ul>
+						<li>Developing efficient and robust algorithms for <b>real-time</b> interactive editing and <b>pose-free</b> reconstruction (SLAM technology) of 3D Gaussian Splatting (3D GS) scenes.</li>
+                    </ul>
 
 					<br>
                     I have completed my Master's dissertation titled "Object Removal and Recolorization within 3D Gaussian Splatting Scenes" under the
@@ -93,6 +93,59 @@
 	            </span>
             </div>
             <div class="introduction"></div>
+
+            <div class="introduction">
+            <br>
+	        <div class="year"><b>Projects & Contributions</b></div>
+                <ul>
+                    <li>
+                        <a href="https://github.com/joshir199/tourguider" target="_blank">LLM powered multilingual Audio TourGuider</a>
+                        <span class="collaborators">
+                            <ul>
+                                <li>
+                                    Developed a <b>full-stack multilingual</b> tourism audio guide platform featuring modular architecture, dynamic prompt engineering for <b>Groq LLM inference</b> (Mixtral-8x7b-32768 via REST API with streaming),
+                                    parallel text chunking + audio generation and audio merging, SQLite caching, and Google Cloud Translate integration.
+                                </li>
+                                <li>
+                                    Engineered production-grade performance optimizations including async logging with QueueHandler, request caching via requests-cache, exponential backoff retries for API calls,
+                                    dynamic max_tokens based on guide length, and background music overlay, <b>achieving 80–90% latency reduction</b>. (from ~55s to ~5–11s)
+                                </li>
+                            </ul>
+                            In-progress.... (for more details, drop me an <a href="mailto:raushanjoshi199@gmail.com" target="_blank">email !</a>)
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/joshir199/CUDA-Programming-Course" target="_blank">CUDA Programming Course</a>
+                        <span class="collaborators">
+                            <ul>
+                                <li>
+                                    Developed a structured CUDA programming course covering <b>GPU architecture</b>, parallel programming models,
+                                    and performance optimization, with weekly modules and hands-on solved <a href="https://leetgpu.com/" target="_blank">LeetGPU</a> examples. (Global Rank 12 - @ResoluteSorcerer199)
+                                </li>
+                                <li>
+                                    Documented key CUDA concepts (threads, blocks, shared memory, streams), <b>libraries (cuBLAS, cuDNN)</b>, memory-compute optimization techniques, and practical <b>GPU-accelerated programs</b> for
+                                    <b>distributed training and inference</b>, enabling effective learning of high-performance deep learning on NVIDIA GPUs.
+                                </li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/joshir199/Token-Classification-on-Medical-Dataset" target="_blank">Token Classification on Medical Dataset</a>
+                        <span class="collaborators">
+                            <ul>
+                                <li>
+                                    Developed end-to-end pipeline for token classification (<b>Named Entity Recognition (NER)</b>) for abbreviation and
+                                    long-form detection using the PLOD-CW-25 medical dataset which follows BIO Scheme.
+                                </li>
+                                <li>
+                                    Built a <b>RoBERTa</b> based architecture by extending pretrained BioRoBERTa model with a custom MLP classification head,
+                                    achieving an <b>F1-score of 0.871</b> and demonstrating improved sequence labeling performance.
+                                </li>
+                            </ul>
+                        </span>
+                    </li>
+                </ul>
+            </div>
 
             <div class="introduction">
             <br>
@@ -151,31 +204,12 @@
             </div>
 
             <div class="introduction">
-            <br>
-	        <div class="year"><b>Open Source Projects & Contributions</b></div>
-                <ul>
-                    <li>
-                        <a href="https://github.com/joshir199/tourguider" target="_blank">LLM powered multi-lingual Audio TourGuider</a>
-                        <span class="collaborators">
-                            In-progress.... (for more details, drop me an <a href="mailto:raushanjoshi199@gmail.com" target="_blank">email !</a>)
-                        </span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/joshir199/CUDA-Programming-Course" target="_blank">CUDA Programming Course</a>
-                        <span class="collaborators">
-                            Properly structured 3-month CUDA programming course with solved examples.
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="introduction">
                 <div class="year"><b>Coding Languages</b></div>
                     <ul>
                         <li>
-                            <img src="https://img.shields.io/badge/-C-000?&logo=C" alt="C" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/-C++-000?&logo=c%2b%2b&logoColor=00599C" alt="C++" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/CUDA-black?logo=nvidia" alt="CUDA" style="width:70px; height:23px;">
+                            <img src="https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white" alt="Rust" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/-Python-000?&logo=Python" alt="Python" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/-Java-000?&logo=Java&logoColor=007396" alt="Java" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/Kotlin-black?logo=kotlin" alt="Kotlin" style="width:70px; height:23px;">
@@ -192,8 +226,10 @@
                             <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" style="width:70px; height:23px;">
+                            <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue" alt="MLFlow" style="width:70px; height:23px;">
+                            <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=flat&logo=Apache%20Airflow&logoColor=white" alt="Apache Airflow" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity" style="width:70px; height:23px;">
                             <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="ThreeJS" style="width:70px; height:23px;">
                         </li>
